@@ -241,6 +241,7 @@ anything at the end of the course
 const compose = (f, g) => a => f(g(a));
 
 const sum = number => number + 1;
+//sum(1) => 2;
 
 compose(
 	sum,
@@ -270,7 +271,10 @@ const newArray = array.map(num => num * 2);
 
 //filter, it also return the new array
 
-const filterArray = array.filer(num => num > 5);
+const filterArray = array.filter(num => num > 5);
+
+// find
+const filterArray = array.find(num => num > 5);
 
 // reduce -> very powerful and also return the new array , it used the accumulator acc
 
@@ -344,6 +348,8 @@ obj.help();
 
  */
 
+// constructor
+
 class Player {
 	constructor(name, type) {
 		console.log(this);
@@ -355,8 +361,12 @@ class Player {
 	}
 }
 
+const harbola = new Player('naam', 'kutta');
+
 // Im below , any time we extend somthing we need to call constructor funtion of the Player
 // we have to use super with the properties that we want to pass to the constructor in this case name and type
+
+/* Will do it late */
 
 class Wizard extends Player {
 	constructor(name, type) {
@@ -379,6 +389,22 @@ wizard1.introduce();
 // ES7 (2016)-> it has only 2 addition in the language
 includes(); //method availabe on strings and arrays
 'Hello'.includes('o');
+
+let array = [10, 20, 20, 30, 40, 40];
+
+function removeDuplicate(array) {
+	let finalResult = [];
+
+	for (let i = 0; i < array.length; i++) {
+		if (!finalResult.includes(array[i])) {
+			finalResult.push(array[i]);
+		}
+	}
+
+	return finalResult;
+}
+
+console.log(removeDuplicate(array));
 
 //question find whether any element present in an array or not using includes
 
@@ -451,8 +477,91 @@ userEmail1.trimEnd();
 const userProfiles = [['command', 27], ['output', 40]];
 Object.fromEntries(userProfiles); // convert in key value pair
 
-
-
 /* ADVANCED LOOPS */
 
+//for of
+const basket = ['yash', 'harbola', 'pandey'];
 
+// in js array and strings are iterables
+
+for (item of basket) {
+	console.log(item);
+}
+
+for (item in basket) {
+	console.log(item);
+}
+
+//for in - it works with an object (not iterating , enumerating enumerable-> when obj are allow us to see the prop)
+
+const obj = {
+	name: 'yash',
+	age: 27,
+	fav: 'js',
+};
+
+for (item in obj) {
+	console.log(item);
+	console.log(obj[item]);
+}
+
+// debugger //console
+
+//Javascript Engine
+
+/*
+
+Almost everyone who has worked with javascript has heard of the V8 engine.
+The idea of the javascript engine and javascript is a single threaded language that it uses a callback queue
+You can also hear like js is an interpreted language.
+
+We will now understand all the above written line for js 
+
+Continue Kare Harbola/Akok/Pandey Ji?
+
+Lets start by below code.
+
+*/
+
+const jsBasic = 'Wowww';
+
+//or
+
+const isHappy = true;
+
+/*
+ABove we wrote some js and question here is how does computer read this?? Any guess bhai logo?
+
+Anyway if i give any js file to computer and say he take this file and do something for me, well
+the computer only understands one's and zero's at the end.
+So when we js file to computer its like me taking to a computer in french ;)
+So the computer doesn't really know what the js is, so how do we communicate with the computer?
+
+Now this is the first step in our learning that is the Javascript Engine (**IMP CONCEPT TO UNSERSTAND JS**)
+
+By Having Javascipt engine in middle it allows you to give the js file to the js engine and engine will 
+understand the js file and tell the computer what to do.
+
+In a sense you just created a translator so you can communicate with somebody that doesn't know your language.
+
+JS Engine understands the js, and our computer finally understand us beacuse of the engine.
+
+Now question here is, what do you think is there is only one js engine or many (pandey ki pehle aap)?
+
+https://en.wikipedia.org/wiki/List_of_ECMAScript_engines
+
+Anyway these engines are written by the programmers for example V8 engine is written in C++
+But why do people write these engines?? (Harbola Ji aap)
+
+
+2008 marked a really pivotal moment in history when it comes to js because V8 was released by google
+before that most browsers used engines that were very basic which meant that js was a little bit slow.
+
+Google has the issue with the google map as it required lot of power, it can do lots of field like can ask for 
+direction, zoom-in zoom-out and other similar stuffs
+and all the previous engine before it makes it very very slow on the browser and google beacuse they're a search engine
+They want everybody to use their search engine and they build a browser in order for them to control more of the market
+So with google maps and their own browser they said we are going to write our own JS engine the V8 engine ,so that
+the js runs way faster on the browser than its done previously and in 2008 they releases the V8.
+
+*/
