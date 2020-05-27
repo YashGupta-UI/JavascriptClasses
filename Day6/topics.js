@@ -334,6 +334,6 @@ sayMyName();
  Execution context tells you which lexical environment is currently running does that makes sense?
  This execution context is going to tell me which lexical environment which planet is currently running
  But to close out this video what is the first lexical environment that we have.
-Well the very first lexical environment is the global lexical environment where we write our code.
+ Well the very first lexical environment is the global lexical environment where we write our code.
 
 */
