@@ -345,7 +345,7 @@ There is another part of the execution context that we have not discussed.
 
 Each context has a link to its outside world.
 Or a link to its parent and this outer environment depends on where the function sits lexical.
-lexicon early means where the function is written.
+lexical means where the function is written.
 
 
 If we create a new variable let's call it variable X that equals x all of these functions fine name
@@ -447,3 +447,11 @@ OPEN funLexical
 DIFF BETWEEN UNDEFINED AND REFERENCE ERROR
 
 */
+
+function a() {}
+
+// window.a [[Scopes]]
+
+// deep cloning //  shallow clone
+
+const harbola = JSON.parse(JSON.stringify(article)); // deep clone
