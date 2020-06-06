@@ -386,6 +386,7 @@ for (let prop in lizard) {
 	}
 }
 
+
 /*
 
 Well this underscore underscore Proto although we can use it here you shouldn't really use it.
@@ -469,3 +470,24 @@ array.__proto__.hasOwnProperty('map');
 
 Array.prototype;
 array.__proto__;
+
+
+/*
+function Counter() {
+    var counter = 0;
+    setTimeout( function () {
+        var innerCounter = 0;
+        counter += 1;
+      
+
+        setTimeout( function () {
+            counter += 1;
+            innerCounter += 1;
+            
+        }, 500);
+
+    }, 1000);
+};
+
+Counter();
+*/
