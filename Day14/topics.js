@@ -513,6 +513,33 @@ class Magician extends Character {
 	}
 }
 
+class Dragon extends Character {
+	constructor(name, weapon, type) {
+		console.log(this, '1');
+		super(name, weapon);
+		console.log(this, '2');
+		this.type = type;
+	}
+}
+
+class Doctor extends Character {
+	constructor(name, weapon, type) {
+		console.log(this, '1');
+		super(name, weapon);
+		console.log(this, '2');
+		this.type = type;
+	}
+}
+
+class JuniorDoctor extends Character {
+	constructor(name, weapon, type) {
+		console.log(this, '1');
+		super(name, weapon);
+		console.log(this, '2');
+		this.type = type;
+	}
+}
+
 const dolby = new Magician('yash', 'hands', 'hide');
 dolby.attack();
 

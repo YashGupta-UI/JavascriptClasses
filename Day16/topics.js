@@ -164,17 +164,3 @@ pipe(
 
 // The idea with functional programming is this idea of separation of data and functions
 // go to the amazon solution
-
-/* OOP vs FP 
-
-Composition vs Inheritance
-open oops code and amazon one
-
-
-Inheritance is a superclass that is extended to smaller pieces that add or overwrite things
-composition is smaller pieces to create something bigger.
-
-The debate between composition versus inheritance
-is a pretty heavy one and a lot of people prefer composition over inheritance.
-
-*/
